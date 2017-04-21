@@ -5,5 +5,5 @@ package team.zhuoke.sdk;
  */
 
 public class SdkUtils {
-    public static final String version = "1.0.0";
+    public static final String version = "1.0.1";
 }
