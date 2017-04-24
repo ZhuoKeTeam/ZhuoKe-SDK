@@ -1,4 +1,4 @@
-package team.zhuoke.sdk;
+package team.zhuoke.zhuoke_sdk;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("team.zhuoke.zuoke_sdk.test", appContext.getPackageName());
+        assertEquals("team.zhuoke.zhuoke_sdk.test", appContext.getPackageName());
     }
 }

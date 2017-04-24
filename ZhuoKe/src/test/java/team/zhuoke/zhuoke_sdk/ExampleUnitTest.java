@@ -1,4 +1,4 @@
-package team.zhuoke.sdk;
+package team.zhuoke.zhuoke_sdk;
 
 import org.junit.Test;
 
