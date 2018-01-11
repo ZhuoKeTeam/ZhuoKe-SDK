@@ -8,5 +8,5 @@ public class SdkUtils {
     /**
      * 当前 sdk 的版本号
      */
-    public static final String version = "1.1.2";
+    public static final String version = "1.0.0-beta4";
 }
