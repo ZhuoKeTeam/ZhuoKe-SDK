@@ -8,4 +8,3 @@ ZhuoKe-SDK
 
 https://github.com/dcendents/android-maven-gradle-plugin
 
-2. 
