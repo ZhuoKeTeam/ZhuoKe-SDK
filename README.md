@@ -1,6 +1,6 @@
 # ZhuoKe-SDK
 
-[![](https://jitpack.io/v/ZhuoKeTeam/zuoke-sdk.svg)](https://jitpack.io/#ZhuoKeTeam/zhuoke-sdk)
+[![](https://jitpack.io/v/ZhuoKeTeam/zhuoke-sdk.svg)](https://jitpack.io/#ZhuoKeTeam/zhuoke-sdk)
 
 ZhuoKe-SDK
 
