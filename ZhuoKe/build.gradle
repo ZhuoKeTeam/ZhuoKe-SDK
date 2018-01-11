@@ -1,7 +1,7 @@
 apply plugin: 'com.android.library'
 apply plugin: 'com.github.dcendents.android-maven'
 
-group = 'com.github.ZhuoKeTeam'
+group = 'com.zhuoke.team'
 
 android {
     compileSdkVersion build_versions.target_sdk

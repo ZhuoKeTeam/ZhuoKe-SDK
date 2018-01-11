@@ -1,1 +1,2 @@
 include ':app', ':ZhuoKe'
+rootProject.name = 'zk-sdk'
