@@ -28,5 +28,5 @@ dependencies {
     implementation support.annotations
     implementation deps.constraint_layout
 
-    implementation 'com.github.ZhuoKeTeam:zuoke-sdk:1.0.0-beta1'
+    implementation 'com.github.ZhuoKeTeam:zuoke-sdk:1.0.0-beta2'
 }
