@@ -20,13 +20,11 @@ android {
 }
 
 dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
-
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
     testCompile deps.junit
     androidTestCompile espresso.core
-
     implementation support.annotations
     implementation deps.constraint_layout
-
-    implementation 'com.github.ZhuoKeTeam:zhuoke-sdk:1.0.0-beta4'
+//    implementation 'com.github.ZhuoKeTeam:zhuoke-sdk:1.0.0-beta4'
+    implementation project(':ZhuoKe')
 }

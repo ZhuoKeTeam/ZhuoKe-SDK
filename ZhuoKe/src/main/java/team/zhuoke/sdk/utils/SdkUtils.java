@@ -1,4 +1,4 @@
-package team.zhuoke.sdk;
+package team.zhuoke.sdk.utils;
 
 /**
  * sdk 的工具类
