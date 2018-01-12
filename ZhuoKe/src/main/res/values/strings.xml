@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">zhuoke-sdk</string>
+    <string name="zk_sdk">ZK_SDK!</string>
 </resources>

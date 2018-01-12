@@ -1,18 +1,55 @@
 package team.zhuoke.zhuoke_sdk;
 
-import android.app.Activity;
 import android.os.Bundle;
-import android.widget.Toast;
+import android.widget.Button;
+import android.widget.TextView;
 
-import team.zhuoke.sdk.SdkUtils;
+import com.blankj.utilcode.util.ToastUtils;
 
-public class MainActivity extends Activity {
+import butterknife.BindView;
+import butterknife.ButterKnife;
+import butterknife.OnClick;
+import team.zhuoke.sdk.base.BaseActivity;
+import team.zhuoke.sdk.utils.ZKPageCtrl;
+import team.zhuoke.sdk.utils.SdkUtils;
+
+public class MainActivity extends BaseActivity {
+
+    @BindView(R.id.textView)
+    TextView textView;
+    @BindView(R.id.button)
+    Button button;
+
+    @Override
+    protected int getLayoutId() {
+        return R.layout.activity_main;
+    }
+
+    @Override
+    protected void initViews() {
+
+    }
+
+    @Override
+    protected void initListener() {
+
+    }
+
+    @Override
+    protected void initData() {
+
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        // TODO: add setContentView(...) invocation
+        ButterKnife.bind(this);
+    }
 
-        Toast.makeText(this, "sdk version: " + SdkUtils.version, Toast.LENGTH_SHORT).show();
+    @OnClick(R.id.button)
+    public void onViewClicked() {
+        ToastUtils.showShort("sdk version: " + SdkUtils.version);
+        ZKPageCtrl.startEggActivity(mContext);
     }
 }
