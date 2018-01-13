@@ -1,8 +1,10 @@
 package team.zhuoke.sdk;
 
+import android.view.View;
 import android.widget.TextView;
 
 import team.zhuoke.sdk.base.BaseActivity;
+import team.zhuoke.sdk.dialog.ScreenDialog;
 
 /**
  * ZK SDK 的彩蛋页面
@@ -11,6 +13,7 @@ import team.zhuoke.sdk.base.BaseActivity;
 
 public class ZKAggActivity extends BaseActivity {
     TextView word;
+    TextView mScreen;
 
     @Override
     protected int getLayoutId() {
@@ -20,12 +23,18 @@ public class ZKAggActivity extends BaseActivity {
     @Override
     protected void initViews() {
         word = findViewById(R.id.word);
+        mScreen = findViewById(R.id.screen);
 
     }
 
     @Override
     protected void initListener() {
-
+        mScreen.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ScreenDialog.show(ZKAggActivity.this);
+            }
+        });
     }
 
     @Override
