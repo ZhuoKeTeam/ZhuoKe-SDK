@@ -1,5 +1,6 @@
 package team.zhuoke.zhuoke_sdk;
 
+import android.app.Application;
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
 import android.support.test.filters.MediumTest;
@@ -11,6 +12,7 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 
 import team.zhuoke.sdk.ZKBase;
+import team.zhuoke.sdk.manager.ZKPathManager;
 
 /**
  * SDCardPathTest
@@ -24,13 +26,12 @@ public class SDCardPathTest {
     @Before
     public void init() {
         context = InstrumentationRegistry.getTargetContext();
-        ZKBase.init(context.getApplicationContext(), true);
+        ZKBase.init((Application) context.getApplicationContext(), true);
     }
 
     @Test
     public void testPath() {
-        String path = ZKBase.getAvailablelPath();
-
+        String path =  ZKPathManager.getInstance().getAvailablePath();
 
         Assert.assertTrue("当前获取的 SD 卡路径是：" + path, false);
     }

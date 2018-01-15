@@ -14,7 +14,7 @@ import team.zhuoke.sdk.ZKBase;
 public class L {
 
     static {
-        isDebug = ZKBase.isDebug;
+        isDebug = ZKBase.isDebug();
     }
 
     private static boolean isDebug = ZKBase.isDebug();
