@@ -29,4 +29,5 @@ dependencies {
     api deps.utilcode
     api deps.rvh
 
+    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
 }
