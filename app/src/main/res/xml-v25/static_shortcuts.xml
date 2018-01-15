@@ -1,0 +1,25 @@
+<shortcuts xmlns:android="http://schemas.android.com/apk/res/android">
+    <shortcut
+        android:enabled="true"
+        android:icon="@mipmap/ic_launcher"
+        android:shortcutDisabledMessage="@string/disabled"
+        android:shortcutId="main"
+        android:shortcutLongLabel="@string/zk_long_label"
+        android:shortcutShortLabel="@string/zk_label">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:targetClass="team.zhuoke.zhuoke_sdk.MainActivity"
+            android:targetPackage="team.zhuoke.zhuoke_sdk" />
+    </shortcut>
+    <shortcut
+        android:enabled="true"
+        android:icon="@mipmap/ic_add"
+        android:shortcutId="add"
+        android:shortcutShortLabel="@string/add_label"
+        >
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:targetClass="team.zhuoke.zhuoke_sdk.AddShortcutActivity"
+            android:targetPackage="team.zhuoke.zhuoke_sdk" />
+    </shortcut>
+</shortcuts>
