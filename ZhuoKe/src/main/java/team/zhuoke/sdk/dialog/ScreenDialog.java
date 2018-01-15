@@ -31,7 +31,7 @@ public class ScreenDialog {
         int widthPx = metrics.widthPixels;//宽度px
         int heightPx = metrics.heightPixels;//高度px
         int dpi = metrics.densityDpi;//密度dp
-        String dpiText = getDPIText(dpi);
+        String dpiText = getDpiText(dpi);
         String scaledDensity = String.format("%.2f", metrics.scaledDensity);//字体缩放因子
 
         //计算dp的方法
@@ -76,7 +76,7 @@ public class ScreenDialog {
 
     }
 
-    private static String getDPIText(int dpi) {
+    private static String getDpiText(int dpi) {
         if (dpi <= DisplayMetrics.DENSITY_LOW) {
             return "ldpi";
         } else if (dpi <= DisplayMetrics.DENSITY_MEDIUM) {
