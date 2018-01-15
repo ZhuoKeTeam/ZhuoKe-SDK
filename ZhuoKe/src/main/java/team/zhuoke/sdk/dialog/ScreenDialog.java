@@ -72,17 +72,7 @@ public class ScreenDialog {
                 .append(scaledDensity)
                 .append("\n");
 
-        dialog = new ZKBaseDialog(context) {
-            @Override
-            protected void copy() {
-
-            }
-
-            @Override
-            protected void share() {
-
-            }
-        }.setTitle("屏幕").setMessage(builder).setCancelable(true).create();
+        dialog = new ZKBaseDialog(context).setTitle("屏幕").setMessage(builder).setCancelable(true).create();
 
     }
 
