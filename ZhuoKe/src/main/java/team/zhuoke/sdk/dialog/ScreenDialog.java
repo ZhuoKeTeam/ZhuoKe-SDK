@@ -34,9 +34,14 @@ public class ScreenDialog {
         String dpiText = getDPIText(dpi);
         String scaledDensity = String.format("%.2f", metrics.scaledDensity);//字体缩放因子
 
+        //计算dp的方法
+        float xdp = metrics.xdpi;
+        float ydp = metrics.ydpi;
 
-        float xdpi = metrics.xdpi;//宽度密度
-        float ydpi = metrics.ydpi;//高度密度
+        //计算英寸的方法
+        float inchX = widthPx / metrics.xdpi;
+        float inchY = heightPx / metrics.ydpi;
+        double inchScreen = Math.sqrt(inchX * inchX + inchY * inchY);
 
         builder.append("屏幕分辨率:")
                 .append(widthPx)
@@ -51,25 +56,33 @@ public class ScreenDialog {
                 .append("\n");
 
         builder.append("精确密度:")
-                .append(xdpi)
-                .append(" × ").append(ydpi)
+                .append(xdp)
+                .append(" × ").append(ydp)
                 .append(" dp\n");
 
-//        builder.append("屏幕尺寸:")
-//                .append(xInch).append("\"")
-//                .append(" × ")
-//                .append(yInch).append("\"")
-//                .append("\n").append(inch)
-//                .append("英寸")
-//                .append("\n");
+        builder.append("屏幕尺寸:")
+                .append(String.format("%.1f", inchX)).append("\"")
+                .append(" × ")
+                .append(String.format("%.1f", inchY)).append("\"")
+                .append(" / ").append(String.format("%.1f", inchScreen))
+                .append("英寸")
+                .append("\n");
 
         builder.append("字体缩放比例:")
                 .append(scaledDensity)
                 .append("\n");
 
+        dialog = new ZKBaseDialog(context) {
+            @Override
+            protected void copy() {
 
-        dialog = new AlertDialog.Builder(context).setTitle("屏幕")
-                .setMessage(builder).setCancelable(true).create();
+            }
+
+            @Override
+            protected void share() {
+
+            }
+        }.setTitle("屏幕").setMessage(builder).setCancelable(true).create();
 
     }
 
