@@ -66,6 +66,14 @@ public abstract class ZKBaseFloatWindow<DATA> {
      */
     public abstract void update(DATA data);
 
+
+    /**
+     * 如果调用show()时没有显示悬浮窗请检查您是否授权悬浮窗
+     * <p>
+     * 具体请自行设置
+     * <p>
+     * 可参考:<url>https://github.com/czy1121/settingscompat</url>
+     */
     public void show() {
         if (baseView != null) {
             windowManager.addView(baseView, lp);
@@ -105,7 +113,7 @@ public abstract class ZKBaseFloatWindow<DATA> {
     }
 
     private void initLayoutParams(int width, int height) {
-        lp = new WindowManager.LayoutParams();
+        lp = new WindowManager.LayoutParams(WindowManager.LayoutParams.TYPE_TOAST);
         //总是出现在应用程序窗口之上。
         lp.type = WindowManager.LayoutParams.TYPE_PHONE;
         // FLAG_NOT_TOUCH_MODAL不阻塞事件传递到后面的窗口
