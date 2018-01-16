@@ -1,6 +1,8 @@
 package team.zhuoke.zhuoke_sdk;
 
+import android.os.CountDownTimer;
 import android.support.v7.widget.LinearLayoutManager;
+import android.view.View;
 import android.widget.Button;
 
 import com.blankj.utilcode.util.ToastUtils;
@@ -22,6 +24,8 @@ public class MainActivity extends BaseActivity {
     Button button;
     @BindView(R.id.recyclerView)
     ZKRecycleView recyclerView;
+    private TestFloatWindow floatWindow;
+    private CountDownTimer countDownTimer;
 
     @Override
     protected int getLayoutId() {
@@ -63,4 +67,30 @@ public class MainActivity extends BaseActivity {
         ZKPageCtrl.startEggActivity(mContext);
     }
 
+    public void showFloatWindow(View view) {
+        if (floatWindow == null) {
+            floatWindow = new TestFloatWindow();
+            floatWindow.show();
+            countDownTimer = new CountDownTimer(30000, 1000) {
+
+                 @Override
+                 public void onTick(long millisUntilFinished) {
+                     floatWindow.update("更新数据，剩余时间:" + millisUntilFinished / 1000+"S");
+                 }
+
+                 @Override
+                 public void onFinish() {
+                     floatWindow.update("演示完毕");
+                 }
+             }.start();
+        }
+    }
+
+    public void closeFloatWindow(View view) {
+        if (floatWindow != null) {
+            countDownTimer.cancel();
+            floatWindow.close();
+            floatWindow = null;
+        }
+    }
 }

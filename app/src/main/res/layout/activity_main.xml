@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="team.zhuoke.zhuoke_sdk.MainActivity"
     android:orientation="vertical"
+    tools:context="team.zhuoke.zhuoke_sdk.MainActivity"
     tools:layout_editor_absoluteY="25dp">
 
     <Button
@@ -17,12 +16,23 @@
         android:text="启动 ZK SDK 彩蛋页面"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        />
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:onClick="showFloatWindow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="展示悬浮窗" />
+
+    <Button
+        android:onClick="closeFloatWindow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="关闭悬浮窗" />
 
     <team.zhuoke.sdk.component.ZKRecycleView
         android:id="@+id/recyclerView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="match_parent" />
 
 </LinearLayout>

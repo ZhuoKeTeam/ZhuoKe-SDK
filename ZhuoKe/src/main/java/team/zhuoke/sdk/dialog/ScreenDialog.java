@@ -13,6 +13,8 @@ import team.zhuoke.sdk.R;
  */
 public class ScreenDialog {
 
+
+
     private static AlertDialog dialog;
 
     public static void show(Context context) {

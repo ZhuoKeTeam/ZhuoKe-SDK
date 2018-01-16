@@ -7,8 +7,6 @@ import android.support.v7.app.AlertDialog;
 import android.util.Log;
 import android.widget.TextView;
 
-import com.blankj.utilcode.util.ToastUtils;
-
 import team.zhuoke.sdk.utils.SdkUtils;
 
 
@@ -49,7 +47,6 @@ public class ZKBaseDialog extends AlertDialog.Builder {
         TextView mTitleView = dialog.findViewById(android.support.v7.appcompat.R.id.alertTitle);
         TextView mMessageView = dialog.findViewById(android.R.id.message);
         SdkUtils.copyText(mTitleView.getText().toString(), mMessageView.getText().toString(), getContext());
-        Log.e("-----",mTitleView.getText().toString() + "|||" + mMessageView.getText().toString());
     }
 
     void share() {

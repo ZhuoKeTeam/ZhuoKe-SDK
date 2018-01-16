@@ -27,6 +27,7 @@ public class ZKAggActivity extends BaseActivity {
 
     }
 
+
     @Override
     protected void initListener() {
         mScreen.setOnClickListener(new View.OnClickListener() {
@@ -40,5 +41,10 @@ public class ZKAggActivity extends BaseActivity {
     @Override
     protected void initData() {
 
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
     }
 }
