@@ -6,6 +6,7 @@ import com.blankj.utilcode.util.FileUtils;
 import com.blankj.utilcode.util.SDCardUtils;
 
 import java.io.File;
+import java.util.ArrayList;
 import java.util.List;
 
 import team.zhuoke.sdk.ZKBase;
@@ -32,6 +33,102 @@ public class ZKPathManager {
             }
         }
         return instance;
+    }
+
+    /**
+     * 获取 当前 App 中可用的所有存储目录, 未校验所有的目录读写权限
+     *
+     * 【仅仅提供 读取的目录，不支持向该目录写入。】 如果需要向目录中写入文件，请使用以下方法：
+     *
+     * getAllAvailablePath()
+     *
+     * getDefaultPath()
+     * getAvailablePath()
+     * getPrivatePath()
+     * getPublicSDCardPath()
+     * getOuterSDCardPath()
+     * getInnerSDCardPath()
+     *
+     * @return  可用的所有存储目录,不支持向该目录写入。
+     */
+    public ArrayList<String> getAllPath() {
+        ArrayList<String> availablePaths = new ArrayList<>();
+
+//        外置 SD 卡
+        List<String> outerSdCardPaths = SDCardUtils.getSDCardPaths(true);
+//        内置 SD 卡
+        List<String> innerSdCardPaths = SDCardUtils.getSDCardPaths(false);
+//        外部公开  App 在 SD 卡的目录
+        String publicSDCardPath = getPublicSDCardPath();
+//        app 内部私有目录
+        String privatePath = getPrivatePath();
+
+        if (outerSdCardPaths != null && outerSdCardPaths.size() > 0) {
+            availablePaths.addAll(outerSdCardPaths);
+        }
+
+        if (innerSdCardPaths != null && innerSdCardPaths.size() > 0) {
+            availablePaths.addAll(innerSdCardPaths);
+        }
+
+        if (!TextUtils.isEmpty(publicSDCardPath)) {
+            availablePaths.add(publicSDCardPath);
+        }
+
+        if (!TextUtils.isEmpty(privatePath)) {
+            availablePaths.add(privatePath);
+        }
+
+        return availablePaths;
+    }
+
+
+    /**
+     * 获取可用的所有目录, 已经校验所有的读写权限。但是会忽略某些不可写入的目录。
+     *
+     * @return 可用的所有目录
+     */
+    public ArrayList<String> getAllAvailablePath() {
+        ArrayList<String> availablePaths = new ArrayList<>();
+
+//        外置 SD 卡
+        List<String> outerSdCardPaths = SDCardUtils.getSDCardPaths(true);
+//        内置 SD 卡
+        List<String> innerSdCardPaths = SDCardUtils.getSDCardPaths(false);
+//        外部公开  App 在 SD 卡的目录
+        String publicSDCardPath = getPublicSDCardPath();
+//        app 内部私有目录
+        String privatePath = getPrivatePath();
+
+        if (outerSdCardPaths != null && outerSdCardPaths.size() > 0) {
+            for (String outerPath: outerSdCardPaths) {
+                String path = checkSDPath(outerPath);
+
+                if (!TextUtils.isEmpty(path)) {
+                    availablePaths.add(path);
+                }
+            }
+        }
+
+        if (innerSdCardPaths != null && innerSdCardPaths.size() > 0) {
+            for (String innerPath: innerSdCardPaths) {
+                String path = checkSDPath(innerPath);
+
+                if (!TextUtils.isEmpty(path)) {
+                    availablePaths.add(path);
+                }
+            }
+        }
+
+        if (!TextUtils.isEmpty(publicSDCardPath)) {
+            availablePaths.add(publicSDCardPath);
+        }
+
+        if (!TextUtils.isEmpty(privatePath)) {
+            availablePaths.add(privatePath);
+        }
+
+        return availablePaths;
     }
 
     /**
@@ -96,9 +193,7 @@ public class ZKPathManager {
         File file = ZKBase.getContext().getExternalFilesDir(null);
 
         if (file != null) {
-
             String path = file.getPath();
-
             return checkSDPath(path);
         }
         return null;
@@ -153,6 +248,5 @@ public class ZKPathManager {
         }
         return null;
     }
-
 
 }
