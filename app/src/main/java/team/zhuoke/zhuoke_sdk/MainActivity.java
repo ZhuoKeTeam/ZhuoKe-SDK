@@ -1,6 +1,7 @@
 package team.zhuoke.zhuoke_sdk;
 
 import android.support.v7.widget.LinearLayoutManager;
+import android.view.MenuItem;
 import android.widget.Button;
 
 import com.blankj.utilcode.util.ToastUtils;
@@ -31,6 +32,8 @@ public class MainActivity extends BaseActivity {
     @Override
     protected void initViews() {
         ButterKnife.bind(this);
+        setTitle("首页");
+
     }
 
     @Override
@@ -63,4 +66,18 @@ public class MainActivity extends BaseActivity {
         ZKPageCtrl.startEggActivity(mContext);
     }
 
+    //菜单的点击事件
+    @Override
+    public boolean onMenuItemClick(MenuItem item) {
+        onRightClick(item);
+        return true;
+    }
+
+    public void onRightClick(MenuItem item) {
+        int i = item.getItemId();
+        if (i == R.id.more) {//默认宽度 56dp
+            //TODO 根据id处理点击事件
+
+        }
+    }
 }

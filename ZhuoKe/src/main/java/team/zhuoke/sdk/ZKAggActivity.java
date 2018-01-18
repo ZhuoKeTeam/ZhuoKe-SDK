@@ -22,6 +22,8 @@ public class ZKAggActivity extends BaseActivity {
 
     @Override
     protected void initViews() {
+        setTitle("彩蛋页面");
+        setRight(R.menu.menu_jump_to);
         word = findViewById(R.id.word);
         mScreen = findViewById(R.id.screen);
 
@@ -41,4 +43,7 @@ public class ZKAggActivity extends BaseActivity {
     protected void initData() {
 
     }
+
+
+
 }
