@@ -33,6 +33,7 @@ public class MainActivity extends BaseActivity {
     protected void initViews() {
         ButterKnife.bind(this);
         setTitle("首页");
+        setRight(R.menu.item_register);
 
     }
 
