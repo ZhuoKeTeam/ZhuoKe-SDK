@@ -8,4 +8,5 @@
     <string name="add_label">动态添加</string>
 
     <string name="disabled">disabled</string>
+    <string name="start_egg_text">启动 ZK SDK 彩蛋页面</string>
 </resources>

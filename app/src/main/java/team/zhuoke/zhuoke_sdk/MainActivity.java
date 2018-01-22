@@ -2,6 +2,7 @@ package team.zhuoke.zhuoke_sdk;
 
 import android.support.v7.widget.LinearLayoutManager;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.Button;
 
 import com.blankj.utilcode.util.ToastUtils;
@@ -21,6 +22,8 @@ public class MainActivity extends BaseActivity {
 
     @BindView(R.id.button)
     Button button;
+    @BindView(R.id.button1)
+    Button button1;
     @BindView(R.id.recyclerView)
     ZKRecycleView recyclerView;
 
@@ -32,6 +35,13 @@ public class MainActivity extends BaseActivity {
     @Override
     protected void initViews() {
         ButterKnife.bind(this);
+
+        button1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ToastUtils.showShort("Toast");
+            }
+        });
         setTitle("首页");
         setRight(R.menu.item_register);
 
