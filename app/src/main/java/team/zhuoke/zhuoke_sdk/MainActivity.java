@@ -65,6 +65,7 @@ public class MainActivity extends BaseActivity {
     public void onViewClicked() {
         ToastUtils.showShort("sdk version: " + SdkUtils.version);
         ZKPageCtrl.startEggActivity(mContext);
+//        ShareUtil.shareText(mContext, "文本", "标题");
     }
 
     //菜单的点击事件
