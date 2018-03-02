@@ -1,25 +1,37 @@
 package team.zhuoke.zhuoke_sdk;
 
-import android.app.Activity;
-import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
-import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 
+import team.zhuoke.sdk.base.BaseActivity;
 import team.zhuoke.sdk.utils.ShortCutsCreator;
 
-public class AddShortcutActivity extends Activity {
-    private Context mContext;
+public class AddShortcutActivity extends BaseActivity {
     ShortCutsCreator shortCutsCreator;
     private int count;
 
+
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        mContext = this;
-        setContentView(R.layout.activity_add_shortcut);
+    protected int getLayoutId() {
+        return R.layout.activity_add_shortcut;
+    }
+
+    @Override
+    protected void initViews() {
+        setTitle("添加快捷方式");
+    }
+
+    @Override
+    protected void initListener() {
         shortCutsCreator = new ShortCutsCreator(mContext);
+
+    }
+
+    @Override
+    protected void initData() {
+
     }
 
     public void OnViewClick(View view) {
@@ -35,4 +47,8 @@ public class AddShortcutActivity extends Activity {
     }
 
 
+    @Override
+    public boolean onMenuItemClick(MenuItem item) {
+        return false;
+    }
 }

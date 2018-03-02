@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AddShortcutActivity">
+    android:background="@color/white_back"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <!--标题-->
+    <include layout="@layout/widget_toolbar" />
 
     <Button
         android:id="@+id/btn_add"
@@ -13,9 +17,7 @@
         android:layout_marginLeft="8dp"
         android:layout_marginTop="8dp"
         android:onClick="OnViewClick"
-        android:text="add"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:text="add" />
 
     <Button
         android:id="@+id/btn_remove"
@@ -24,7 +26,5 @@
         android:layout_marginLeft="8dp"
         android:layout_marginTop="8dp"
         android:onClick="OnViewClick"
-        android:text="remove"
-        app:layout_constraintLeft_toRightOf="@+id/btn_add"
-        app:layout_constraintTop_toTopOf="parent" />
-</android.support.constraint.ConstraintLayout>
+        android:text="remove" />
+</LinearLayout>

@@ -21,7 +21,6 @@ public class ScreenDialog {
         if (dialog == null) {
             buildDialog(context);
         }
-
         dialog.show();
         TextView mMessageView = dialog.findViewById(android.R.id.message);
         mMessageView.setTextColor(context.getResources().getColor(R.color.secondary_text));
