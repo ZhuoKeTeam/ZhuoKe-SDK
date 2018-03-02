@@ -16,11 +16,13 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
             <meta-data
                 android:name="android.app.shortcuts"
                 android:resource="@xml/static_shortcuts" />
         </activity>
         <activity android:name=".AddShortcutActivity" />
+        <activity android:name=".NotificationUtilActivity"></activity>
     </application>
 
 </manifest>

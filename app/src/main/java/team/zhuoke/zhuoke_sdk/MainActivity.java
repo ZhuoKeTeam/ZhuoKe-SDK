@@ -2,9 +2,7 @@ package team.zhuoke.zhuoke_sdk;
 
 import android.content.Intent;
 import android.os.CountDownTimer;
-import android.provider.Settings;
 import android.support.v7.widget.LinearLayoutManager;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
@@ -18,10 +16,11 @@ import butterknife.ButterKnife;
 import butterknife.OnClick;
 import team.zhuoke.sdk.base.BaseActivity;
 import team.zhuoke.sdk.component.ZKRecycleView;
+import team.zhuoke.sdk.notification.NotificationItemClickListener;
 import team.zhuoke.sdk.utils.SdkUtils;
 import team.zhuoke.sdk.utils.ZKPageCtrl;
 
-public class MainActivity extends BaseActivity {
+public class MainActivity extends BaseActivity  {
 
     @BindView(R.id.button)
     Button button;
@@ -97,4 +96,10 @@ public class MainActivity extends BaseActivity {
             floatWindow = null;
         }
     }
+
+    public void showNotificationUtil(View view) {
+        startActivity(new Intent(getBaseContext(), NotificationUtilActivity.class));
+    }
+
+
 }
