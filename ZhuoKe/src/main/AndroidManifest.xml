@@ -11,8 +11,24 @@
     <uses-permission android:name="android.permission.EXPAND_STATUS_BAR" />
 
     <application>
-        <activity android:name=".ZKAggActivity" />
+        <activity
+            android:name=".ZKAggActivity"
+            android:exported="true" />
         <activity android:name=".webview.WebActivity" />
-    </application>
 
+        <!--通知栏自定义快捷选项-->
+        <service
+            android:name=".tile.ZKTileService"
+            android:icon="@drawable/ic_timer"
+            android:label="卓客时间"
+            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
+            <intent-filter>
+                <action android:name="android.service.quicksettings.action.QS_TILE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.service.quicksettings.ACTIVE_TILE"
+                android:value="true" />
+        </service>
+    </application>
 </manifest>
