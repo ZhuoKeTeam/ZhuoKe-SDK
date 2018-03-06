@@ -29,16 +29,17 @@ dependencies {
     api deps.utilcode
     api deps.rvh
 
+    // okhttp
+    api deps.okhttp
+    api deps.okhttp_interceptor
 
-//    以下这些 必须在主 app 中依赖
-    implementation deps.okhttp
-    implementation deps.okhttp_interceptor
-    implementation deps.stetho
-    implementation deps.stetho_okhttp3
+    //stetho
+    api deps.stetho
+    api deps.stetho_okhttp3
 
     // retrofit2
-    implementation deps.retrofit2
-    implementation deps.retrofit2_gson
+    api deps.retrofit2
+    api deps.retrofit2_gson
 
     implementation 'com.android.support.constraint:constraint-layout:1.0.2'
 }
