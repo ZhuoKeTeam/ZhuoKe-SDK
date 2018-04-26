@@ -36,10 +36,12 @@ captures/
 
 # Intellij
 *.iml
-.idea/workspace.xml
 
 # Keystore files
 *.jks
 
+# Mac .DS_Store file
+.DS_Store
 
-.idea/
+# externalNativeBuild
+.externalNativeBuild
