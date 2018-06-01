@@ -22,12 +22,16 @@ android {
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation 'com.android.support.constraint:constraint-layout:1.0.2'
-    testCompile deps.junit
     androidTestCompile espresso.core
     implementation support.annotations
     implementation deps.constraint_layout
     implementation deps.butterknife
+    implementation deps.systembartint
     annotationProcessor deps.butterknife_compiler
-    //    implementation 'com.github.ZhuoKeTeam:zhuoke-sdk:1.0.0-beta4'
+
+//    implementation zkteam.zk_sdk
+//    implementation 'com.github.ZhuoKeTeam:zhuoke-sdk:1.0.4'
     implementation project(':ZhuoKe')
+
+    testCompile deps.junit
 }

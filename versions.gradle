@@ -34,8 +34,12 @@ versions.systembartint = "1.0.3"
 versions.multi_image_selector = "1.2"
 versions.multi_image_selector_hx = "1.2.2"
 versions.bugtags = "latest.integration"
+versions.zk_sdk = "1.0.4"
 ext.versions = versions
 
+def zkteam = [:]
+zkteam.zk_sdk = "com.github.ZhuoKeTeam:zhuoke-sdk:$versions.zk_sdk"
+ext.zkteam = zkteam
 
 def support = [:]
 support.app_compat = "com.android.support:appcompat-v7:$versions.support"
