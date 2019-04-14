@@ -11,6 +11,8 @@ import android.view.Window;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.readystatesoftware.systembartint.SystemBarTintManager;
+
 import team.zhuoke.sdk.R;
 
 import static android.view.View.GONE;
@@ -31,6 +33,15 @@ public abstract class BaseActivity extends AppCompatActivity implements Toolbar.
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         this.requestWindowFeature(Window.FEATURE_NO_TITLE);
+
+        // create our manager instance after the content view is set
+        SystemBarTintManager tintManager = new SystemBarTintManager(this);
+        tintManager.setTintResource(R.color.blue);
+        // enable status bar tint
+        tintManager.setStatusBarTintEnabled(true);
+        // enable navigation bar tint
+        tintManager.setNavigationBarTintEnabled(false);
+
         super.onCreate(savedInstanceState);
         setContentView(getLayoutId());
         initToolbar();

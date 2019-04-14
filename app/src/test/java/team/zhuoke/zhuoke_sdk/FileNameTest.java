@@ -25,6 +25,9 @@ public class FileNameTest {
     private void dirList(String path) {
         List<File> list = FileUtils.listFilesInDir(path, true);
 
+        if (list == null)
+            return;
+
         for (File f : list) {
 
             if (f.isDirectory()) {

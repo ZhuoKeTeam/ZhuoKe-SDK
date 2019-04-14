@@ -16,7 +16,6 @@ import butterknife.ButterKnife;
 import butterknife.OnClick;
 import team.zhuoke.sdk.base.BaseActivity;
 import team.zhuoke.sdk.component.ZKRecycleView;
-import team.zhuoke.sdk.notification.NotificationItemClickListener;
 import team.zhuoke.sdk.utils.SdkUtils;
 import team.zhuoke.sdk.utils.ZKPageCtrl;
 

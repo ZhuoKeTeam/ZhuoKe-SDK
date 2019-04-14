@@ -32,6 +32,8 @@ dependencies {
     api deps.utilcode
     api deps.rvh
 
+    implementation deps.systembartint
+
     // okhttp
     api deps.okhttp
     api deps.okhttp_interceptor
