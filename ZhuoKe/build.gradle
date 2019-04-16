@@ -32,8 +32,8 @@ dependencies {
     api deps.systembartint
 
     // okhttp
-    api deps.okhttp
-    api deps.okhttp_interceptor
+    implementation deps.okhttp
+    implementation deps.okhttp_interceptor
 
     //stetho
     api deps.stetho
