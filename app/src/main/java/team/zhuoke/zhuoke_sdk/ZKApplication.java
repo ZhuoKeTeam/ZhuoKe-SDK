@@ -3,6 +3,7 @@ package team.zhuoke.zhuoke_sdk;
 import android.app.Application;
 
 import team.zhuoke.sdk.ZKManager;
+import team.zhuoke.zhuoke_sdk.api.UrlConfig;
 
 /**
  * team.zhuoke.zhuoke_sdk.ZKApplication
@@ -18,7 +19,7 @@ public class ZKApplication extends Application {
         ZKManager.getInstance().initStethoForApplicaiton(this);
         ZKManager.getInstance().initTakePhotoForApplication();
 
-        ZKManager.getInstance().setBaseUrl(ZKConstant.getBaseUrl());
+        ZKManager.getInstance().setBaseUrl(UrlConfig.getBaseUrl());
 
     }
 }

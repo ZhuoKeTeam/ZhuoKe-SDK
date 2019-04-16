@@ -11,10 +11,9 @@ import retrofit2.Response;
 import team.zhuoke.sdk.base.BaseActivity;
 import team.zhuoke.sdk.manager.ZKConnectionManager;
 import team.zhuoke.zhuoke_sdk.R;
-import team.zhuoke.zhuoke_sdk.bean.ZKBean;
-import team.zhuoke.zhuoke_sdk.ZKConstant;
 import team.zhuoke.zhuoke_sdk.api.UrlConfig;
 import team.zhuoke.zhuoke_sdk.api.ZhuoKeApi;
+import team.zhuoke.zhuoke_sdk.bean.ZKBean;
 
 public class NetworkQuestionActivity extends BaseActivity implements View.OnClickListener {
 
@@ -47,7 +46,7 @@ public class NetworkQuestionActivity extends BaseActivity implements View.OnClic
 
     @Override
     protected void initData() {
-        tvRequestUrl.setText(String.format("%s%s", ZKConstant.getBaseUrl(), ZKConstant.URL_TEST));
+        tvRequestUrl.setText(String.format("%s%s", UrlConfig.getBaseUrl(), UrlConfig.URL_TEST));
     }
 
     @Override
