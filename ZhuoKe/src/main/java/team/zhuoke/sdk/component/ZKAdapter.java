@@ -1,11 +1,12 @@
 package team.zhuoke.sdk.component;
 
-import android.support.annotation.Nullable;
 
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.BaseViewHolder;
 
 import java.util.List;
+
+import androidx.annotation.Nullable;
 
 /**
  * ZKAdapter

@@ -6,11 +6,12 @@ import android.content.pm.ShortcutInfo;
 import android.content.pm.ShortcutManager;
 import android.graphics.drawable.Icon;
 import android.os.Build;
-import android.support.annotation.DrawableRes;
 import android.text.TextUtils;
 import android.widget.Toast;
 
 import java.util.Arrays;
+
+import androidx.annotation.DrawableRes;
 
 /**
  * Created by Doraemon on 2018/1/15.

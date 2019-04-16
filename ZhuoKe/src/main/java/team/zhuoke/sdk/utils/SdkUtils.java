@@ -1,13 +1,8 @@
 package team.zhuoke.sdk.utils;
 
-import android.app.AppOpsManager;
 import android.content.ClipData;
 import android.content.ClipboardManager;
 import android.content.Context;
-import android.os.Binder;
-import android.util.Log;
-
-import java.lang.reflect.Method;
 
 /**
  * sdk 的工具类

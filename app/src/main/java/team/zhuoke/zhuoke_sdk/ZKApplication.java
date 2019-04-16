@@ -2,7 +2,7 @@ package team.zhuoke.zhuoke_sdk;
 
 import android.app.Application;
 
-import team.zhuoke.sdk.ZKBase;
+import team.zhuoke.sdk.ZKManager;
 
 /**
  * team.zhuoke.zhuoke_sdk.ZKApplication
@@ -14,6 +14,11 @@ public class ZKApplication extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
-        ZKBase.init(this, true);
+        ZKManager.getInstance().init(this);
+        ZKManager.getInstance().initStethoForApplicaiton(this);
+        ZKManager.getInstance().initTakePhotoForApplication();
+
+        ZKManager.getInstance().setBaseUrl(ZKConstant.getBaseUrl());
+
     }
 }

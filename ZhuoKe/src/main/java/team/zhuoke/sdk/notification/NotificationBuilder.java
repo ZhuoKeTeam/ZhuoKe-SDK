@@ -5,13 +5,13 @@ import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
-import android.support.v4.app.NotificationCompat;
-import android.support.v4.app.NotificationManagerCompat;
 import android.widget.RemoteViews;
 import android.widget.Toast;
 
 import java.util.ArrayList;
 
+import androidx.core.app.NotificationCompat;
+import androidx.core.app.NotificationManagerCompat;
 import team.zhuoke.sdk.R;
 
 /**

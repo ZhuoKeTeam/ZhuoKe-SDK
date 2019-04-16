@@ -1,10 +1,10 @@
 package team.zhuoke.sdk.dialog;
 
 import android.content.Context;
-import android.support.v7.app.AlertDialog;
 import android.util.DisplayMetrics;
 import android.widget.TextView;
 
+import androidx.appcompat.app.AlertDialog;
 import team.zhuoke.sdk.R;
 
 /**

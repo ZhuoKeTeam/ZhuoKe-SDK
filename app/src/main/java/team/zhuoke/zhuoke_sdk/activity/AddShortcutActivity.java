@@ -1,4 +1,4 @@
-package team.zhuoke.zhuoke_sdk;
+package team.zhuoke.zhuoke_sdk.activity;
 
 import android.content.Intent;
 import android.net.Uri;
@@ -7,6 +7,7 @@ import android.view.View;
 
 import team.zhuoke.sdk.base.BaseActivity;
 import team.zhuoke.sdk.utils.ShortCutsCreator;
+import team.zhuoke.zhuoke_sdk.R;
 
 public class AddShortcutActivity extends BaseActivity {
     ShortCutsCreator shortCutsCreator;

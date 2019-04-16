@@ -1,11 +1,13 @@
-package team.zhuoke.zhuoke_sdk;
+package team.zhuoke.zhuoke_sdk.adapter;
 
-import android.support.annotation.Nullable;
 
 import java.util.List;
 
+import androidx.annotation.Nullable;
 import team.zhuoke.sdk.component.ZKAdapter;
 import team.zhuoke.sdk.component.ZKViewHolder;
+import team.zhuoke.zhuoke_sdk.R;
+import team.zhuoke.zhuoke_sdk.bean.ItemBean;
 
 /**
  * ZKCommentAdapter

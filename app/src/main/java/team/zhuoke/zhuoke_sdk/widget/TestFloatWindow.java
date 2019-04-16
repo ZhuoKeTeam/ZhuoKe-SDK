@@ -1,9 +1,10 @@
-package team.zhuoke.zhuoke_sdk;
+package team.zhuoke.zhuoke_sdk.widget;
 
 import android.view.View;
 import android.widget.TextView;
 
 import team.zhuoke.sdk.window.ZKBaseFloatWindow;
+import team.zhuoke.zhuoke_sdk.R;
 
 /**
  * @author Yunr

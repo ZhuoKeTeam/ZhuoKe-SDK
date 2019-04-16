@@ -1,4 +1,4 @@
-package team.zhuoke.zhuoke_sdk;
+package team.zhuoke.zhuoke_sdk.activity;
 
 import android.view.View;
 import android.widget.Toast;
@@ -7,6 +7,7 @@ import team.zhuoke.sdk.base.BaseActivity;
 import team.zhuoke.sdk.notification.ItemDataBean;
 import team.zhuoke.sdk.notification.NotificationBuilder;
 import team.zhuoke.sdk.notification.NotificationItemClickListener;
+import team.zhuoke.zhuoke_sdk.R;
 
 public class NotificationUtilActivity extends BaseActivity implements NotificationItemClickListener {
 

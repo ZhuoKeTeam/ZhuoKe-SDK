@@ -1,8 +1,7 @@
-package team.zhuoke.zhuoke_sdk;
+package team.zhuoke.zhuoke_sdk.activity;
 
 import android.content.Intent;
 import android.os.CountDownTimer;
-import android.support.v7.widget.LinearLayoutManager;
 import android.view.View;
 import android.widget.Button;
 
@@ -11,6 +10,7 @@ import com.blankj.utilcode.util.ToastUtils;
 import java.util.ArrayList;
 import java.util.List;
 
+import androidx.recyclerview.widget.LinearLayoutManager;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
@@ -18,6 +18,10 @@ import team.zhuoke.sdk.base.BaseActivity;
 import team.zhuoke.sdk.component.ZKRecycleView;
 import team.zhuoke.sdk.utils.SdkUtils;
 import team.zhuoke.sdk.utils.ZKPageCtrl;
+import team.zhuoke.zhuoke_sdk.bean.ItemBean;
+import team.zhuoke.zhuoke_sdk.R;
+import team.zhuoke.zhuoke_sdk.widget.TestFloatWindow;
+import team.zhuoke.zhuoke_sdk.adapter.ZKCommentAdapter;
 
 public class MainActivity extends BaseActivity  {
 
@@ -98,6 +102,10 @@ public class MainActivity extends BaseActivity  {
 
     public void showNotificationUtil(View view) {
         startActivity(new Intent(getBaseContext(), NotificationUtilActivity.class));
+    }
+
+    public void entryNetworkPage(View view) {
+        startActivity(new Intent(getBaseContext(), NetworkQuestionActivity.class));
     }
 
 

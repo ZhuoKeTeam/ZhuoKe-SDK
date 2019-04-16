@@ -2,9 +2,10 @@ package team.zhuoke.sdk.component;
 
 
 import android.content.Context;
-import android.support.annotation.Nullable;
-import android.support.v7.widget.RecyclerView;
 import android.util.AttributeSet;
+
+import androidx.annotation.Nullable;
+import androidx.recyclerview.widget.RecyclerView;
 
 /**
  * ZKRecycleView
@@ -16,7 +17,7 @@ import android.util.AttributeSet;
  * Created by WangQing on 2018/1/15.
  */
 
-public class ZKRecycleView extends RecyclerView{
+public class ZKRecycleView extends RecyclerView {
 
     public ZKRecycleView(Context context) {
         super(context);

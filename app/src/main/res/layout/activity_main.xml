@@ -7,7 +7,7 @@
               android:background="@color/blue_dark_text"
               android:fitsSystemWindows="true"
               android:orientation="vertical"
-              tools:context="team.zhuoke.zhuoke_sdk.MainActivity"
+              tools:context="team.zhuoke.zhuoke_sdk.activity.MainActivity"
               tools:layout_editor_absoluteY="25dp">
 
     <Button
@@ -37,6 +37,12 @@
         android:layout_height="wrap_content"
         android:onClick="showNotificationUtil"
         android:text="通知栏工具Demo"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="entryNetworkPage"
+        android:text="进入请求网络页面"/>
 
 
     <team.zhuoke.sdk.component.ZKRecycleView

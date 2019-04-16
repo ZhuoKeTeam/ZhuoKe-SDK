@@ -2,11 +2,11 @@ package team.zhuoke.sdk.dialog;
 
 import android.content.Context;
 import android.content.DialogInterface;
-import android.support.annotation.NonNull;
-import android.support.v7.app.AlertDialog;
-import android.util.Log;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
+import team.zhuoke.sdk.R;
 import team.zhuoke.sdk.utils.SdkUtils;
 
 
@@ -44,7 +44,7 @@ public class ZKBaseDialog extends AlertDialog.Builder {
     }
 
     void copy() {
-        TextView mTitleView = dialog.findViewById(android.support.v7.appcompat.R.id.alertTitle);
+        TextView mTitleView = dialog.findViewById(R.id.alertTitle);
         TextView mMessageView = dialog.findViewById(android.R.id.message);
         SdkUtils.copyText(mTitleView.getText().toString(), mMessageView.getText().toString(), getContext());
     }

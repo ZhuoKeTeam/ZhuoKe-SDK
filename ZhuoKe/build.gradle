@@ -22,17 +22,14 @@ android {
     lintOptions {
         abortOnError false
     }
+
 }
 
 dependencies {
     api fileTree(dir: 'libs', include: ['*.jar'])
-    api support.recyclerview
-    api support.app_compat
-    api deps.support.v4
     api deps.utilcode
-    api deps.rvh
-
-    implementation deps.systembartint
+    api deps.rvhX
+    api deps.systembartint
 
     // okhttp
     api deps.okhttp
@@ -46,5 +43,14 @@ dependencies {
     api deps.retrofit2
     api deps.retrofit2_gson
 
-    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
+    api deps.constraint_layout
+    api deps.recyclerviewX
+
+    api(deps.appcompatX){
+        exclude group: 'com.android.support', module: 'support-compat'
+    }
+
+
+//    api deps.lifecycleRuntimeX
+//    api deps.lifecycleExtensionsX
 }

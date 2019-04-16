@@ -44,6 +44,10 @@ public class ZKManager {
         init(application, false);
     }
 
+    public void setBaseUrl(String url) {
+        Constant.BASE_API_URL = url;
+    }
+
     /**
      * @param debug 通常使用 BuildConfig.DEBUG
      */

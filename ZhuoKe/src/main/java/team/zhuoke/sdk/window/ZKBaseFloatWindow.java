@@ -2,7 +2,6 @@ package team.zhuoke.sdk.window;
 
 import android.content.Context;
 import android.graphics.PixelFormat;
-import android.support.annotation.LayoutRes;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
@@ -11,6 +10,8 @@ import android.view.WindowManager;
 
 import com.blankj.utilcode.util.SizeUtils;
 import com.blankj.utilcode.util.Utils;
+
+import androidx.annotation.LayoutRes;
 
 /**
  * @author Yunr

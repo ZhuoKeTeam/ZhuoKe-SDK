@@ -8,7 +8,7 @@
         android:shortcutShortLabel="@string/zk_label">
         <intent
             android:action="android.intent.action.VIEW"
-            android:targetClass="team.zhuoke.zhuoke_sdk.MainActivity"
+            android:targetClass="team.zhuoke.zhuoke_sdk.activity.MainActivity"
             android:targetPackage="team.zhuoke.zhuoke_sdk" />
     </shortcut>
     <shortcut
@@ -19,7 +19,7 @@
         >
         <intent
             android:action="android.intent.action.VIEW"
-            android:targetClass="team.zhuoke.zhuoke_sdk.AddShortcutActivity"
+            android:targetClass="team.zhuoke.zhuoke_sdk.activity.AddShortcutActivity"
             android:targetPackage="team.zhuoke.zhuoke_sdk" />
     </shortcut>
 </shortcuts>

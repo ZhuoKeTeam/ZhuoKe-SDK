@@ -98,8 +98,18 @@ public class ZKConnectionManager {
                 .build();
     }
 
-    public ZKApi getZKApi() {
+    private ZKApi getZKApi() {
         return getRetrofit().create(ZKApi.class);
     }
+
+    public Object getApi(Class cls) {
+        return getRetrofit().create(cls);
+    }
+
+    public void setBaseUrl(String baseUrl) {
+        Constant.BASE_API_URL = baseUrl;
+    }
+
+
 
 }

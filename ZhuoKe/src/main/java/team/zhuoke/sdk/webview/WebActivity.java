@@ -1,13 +1,12 @@
 package team.zhuoke.sdk.webview;
 
-import android.content.Intent;
 import android.content.res.Resources;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.webkit.WebChromeClient;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 
+import androidx.appcompat.app.AppCompatActivity;
 import team.zhuoke.sdk.R;
 
 public class WebActivity extends AppCompatActivity {

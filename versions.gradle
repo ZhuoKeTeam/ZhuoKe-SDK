@@ -3,14 +3,14 @@ def versions = [:]
 //versions.arch = hasProperty("ARCH_VERSION") ? getProperty("ARCH_VERSION") : "1.0.0-rc1"
 versions.arch = "1.0.0"
 versions.arch_paging = "1.0.0-alpha3"
-versions.android_gradle_plugin = "3.0.1"
+versions.android_gradle_plugin = "3.3.2"
 versions.android_maven_gradle_plugin = "2.0"
 versions.anko_version = "0.10.1"
 versions.arouter = "1.2.2"
 versions.arouter_compiler = "1.1.3"
 versions.banners = "1.4.10"
-versions.butterknife = "8.8.1"
-versions.constraint_layout = "1.0.2"
+versions.butterknife = "10.1.0"
+versions.constraint_layout = "1.1.3"
 versions.dagger = "2.13"
 versions.espresso = "3.0.1"
 versions.floatmenu = "2.0.1"
@@ -19,12 +19,13 @@ versions.junit = "4.12"
 versions.kotlin_version = "1.1.51"
 versions.material_refesh_layout = "1.3.0"
 versions.networkbench_version = "2.7.1"
-versions.okhttp = "3.9.1"
+versions.okhttp = "3.14.1"
 versions.photo_view = "2.1.3"
 versions.photo_draweeview = "1.1.3"
-versions.retrofit = "2.3.0"
-versions.rvh = "2.9.30"
-versions.support = "27.0.0"
+versions.retrofit = "2.5.0"
+versions.rvh = "2.9.46"
+versions.rvhX = "2.9.45-androidx"
+versions.support = "28.0.0"
 versions.stetho = "1.5.0"
 versions.utilcode = "1.23.7"
 versions.runner = "1.0.1"
@@ -34,7 +35,11 @@ versions.systembartint = "1.0.3"
 versions.multi_image_selector = "1.2"
 versions.multi_image_selector_hx = "1.2.2"
 versions.bugtags = "latest.integration"
-versions.zk_sdk = "1.0.4"
+versions.zk_sdk = "1.0.5"
+versions.lifecycleX="2.0.0"
+versions.appcompatX="1.0.2"
+versions.recyclerviewX="1.1.0-alpha04"
+
 ext.versions = versions
 
 def zkteam = [:]
@@ -43,6 +48,7 @@ ext.zkteam = zkteam
 
 def support = [:]
 support.app_compat = "com.android.support:appcompat-v7:$versions.support"
+support.appCompat = "com.android.support:appcompat:$versions.support"
 support.design = "com.android.support:design:$versions.support"
 support.annotations = "com.android.support:support-annotations:$versions.support"
 support.recyclerview = "com.android.support:recyclerview-v7:$versions.support"
@@ -99,6 +105,7 @@ deps.arouter_compiler = "com.alibaba:arouter-compiler:$versions.arouter_compiler
 
 deps.junit = "junit:junit:$versions.junit"
 
+deps.retrofit = "com.squareup.retrofit2:retrofit:$versions.retrofit"
 deps.retrofit2 = "com.squareup.retrofit2:retrofit:$versions.retrofit"
 deps.retrofit2_gson = "com.squareup.retrofit2:converter-gson:$versions.retrofit"
 deps.floatmenu = "com.yw.game.floatmenu:FloatMenu:$versions.floatmenu"
@@ -115,6 +122,7 @@ deps.material_refesh_layout = "com.cjj.materialrefeshlayout:library:$versions.ma
 deps.banners = "com.youth.banner:banner:$versions.banners"
 
 deps.rvh = "com.github.CymChad:BaseRecyclerViewAdapterHelper:$versions.rvh"
+deps.rvhX = "com.github.CymChad:BaseRecyclerViewAdapterHelper:$versions.rvhX"
 
 deps.dagger = "com.google.dagger:dagger:$versions.dagger"
 deps.dagger_support = "com.google.dagger:dagger-android-support:$versions.dagger"
@@ -133,13 +141,23 @@ deps.bugtags_lib = "com.bugtags.library:bugtags-lib:$versions.bugtags"
 
 deps.support = support
 deps.lifecycle = lifecycle
+
+
+// AndroidX
+deps.appcompatX = "androidx.appcompat:appcompat:$versions.appcompatX"
+deps.lifecycleRuntimeX = "androidx.lifecycle:lifecycle-runtime:$versions.lifecycleX"
+deps.lifecycleExtensionsX = "androidx.lifecycle:lifecycle-extensions:$versions.lifecycleX"
+deps.lifecycleCompilerX = "androidx.lifecycle:lifecycle-compiler:$versions.lifecycleX"
+
+deps.recyclerviewX = "androidx.recyclerview:recyclerview:$versions.recyclerviewX"
+
 ext.deps = deps
 
 
 def build_versions = [:]
 build_versions.min_sdk = 16
-build_versions.target_sdk = 26
-build_versions.build_tools = "26.0.2"
+build_versions.target_sdk = 28
+build_versions.build_tools = "28.0.3"
 ext.build_versions = build_versions
 
 

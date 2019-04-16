@@ -1,8 +1,9 @@
 package team.zhuoke.sdk.notification;
 
-import android.support.annotation.DrawableRes;
 
 import java.io.Serializable;
+
+import androidx.annotation.DrawableRes;
 
 /**
  * @author Yunr

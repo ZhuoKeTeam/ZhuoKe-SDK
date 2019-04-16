@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="team.zhuoke.zhuoke_sdk.NotificationUtilActivity">
+    tools:context="team.zhuoke.zhuoke_sdk.activity.NotificationUtilActivity">
 
     <Button
         android:layout_width="match_parent"
