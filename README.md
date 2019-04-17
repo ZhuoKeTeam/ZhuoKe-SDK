@@ -45,7 +45,8 @@ android {
 
 ```
 buildscript {
-    apply from: 'versions.gradle'
+    //apply from: 'versions.gradle'
+    apply from: 'https://www.zkteam.cc/android/gradle/versions.gradle' //推荐使用在线版本，更新及时，还能随时查看。
     ...
 }
 ```
