@@ -26,16 +26,16 @@ android {
 Step 1.
 ```
 allprojects {
-		repositories {
-			...
-			maven { url 'https://jitpack.io' }
-		}
-	}
+    repositories {
+        ...
+        maven { url 'https://jitpack.io' }
+    }
+}
 ```
 
 Step 2. 
 ```
 dependencies {
-	        implementation 'com.github.ZhuoKeTeam:zhuoke-sdk:1.0.7'
+    implementation 'com.github.ZhuoKeTeam:zhuoke-sdk:1.0.7'
 }
 ```
