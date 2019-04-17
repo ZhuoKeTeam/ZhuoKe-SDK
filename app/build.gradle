@@ -17,11 +17,11 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+
     compileOptions {
         sourceCompatibility 1.8
         targetCompatibility 1.8
     }
-
 }
 
 dependencies {
@@ -31,7 +31,7 @@ dependencies {
     implementation deps.butterknife
     annotationProcessor deps.butterknife_compiler
 
-    implementation 'com.github.ZhuoKeTeam:zhuoke-sdk:1.0.6'
+    implementation 'com.github.ZhuoKeTeam:zhuoke-sdk:1.0.8'
 //    implementation project(':ZhuoKe')
 
 
