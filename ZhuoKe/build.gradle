@@ -46,6 +46,8 @@ dependencies {
     // retrofit2
     api deps.retrofit2
     api deps.retrofit2_gson
+    api deps.retrofit2_adapter
+
 
     api deps.constraint_layout
     api deps.recyclerviewX

@@ -12,6 +12,7 @@ import okhttp3.Request;
 import okhttp3.Response;
 import okhttp3.logging.HttpLoggingInterceptor;
 import retrofit2.Retrofit;
+import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
 import retrofit2.converter.gson.GsonConverterFactory;
 import team.zhuoke.sdk.Constant;
 import team.zhuoke.sdk.ZKBase;
@@ -95,6 +96,7 @@ public class ZKConnectionManager {
                 .baseUrl(Constant.BASE_API_URL)
                 .client(builder.build())
                 .addConverterFactory(GsonConverterFactory.create(getGson()))
+                .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
                 .build();
     }
 
