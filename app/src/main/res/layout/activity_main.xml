@@ -5,10 +5,8 @@
               android:layout_width="match_parent"
               android:layout_height="match_parent"
               android:background="@color/blue_dark_text"
-              android:fitsSystemWindows="true"
               android:orientation="vertical"
-              tools:context="team.zhuoke.zhuoke_sdk.activity.MainActivity"
-              tools:layout_editor_absoluteY="25dp">
+              tools:context="team.zhuoke.zhuoke_sdk.activity.MainActivity">
 
     <Button
         android:id="@+id/button"

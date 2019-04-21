@@ -40,6 +40,7 @@ public class MainActivity extends BaseActivity  {
     @Override
     protected void initViews() {
         ButterKnife.bind(this);
+        setBarState(recyclerView);
     }
 
     @Override

@@ -1,5 +1,6 @@
 package team.zhuoke.sdk.base;
 
+import android.app.Activity;
 import android.content.Context;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -7,10 +8,14 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.blankj.utilcode.util.BarUtils;
+
+import androidx.annotation.ColorRes;
 import androidx.annotation.LayoutRes;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import team.zhuoke.sdk.R;
 
 import static android.view.View.GONE;
 import static android.view.View.VISIBLE;
@@ -52,6 +57,29 @@ public abstract class BaseFragment extends Fragment {
         initView(rootView);
     }
 
+    protected void showBarState(View rootView, @ColorRes int color, boolean isShow) {
+        if (isShow) {
+            BarUtils.subtractMarginTopEqualStatusBarHeight(rootView);
+
+            if (color == 0) {
+                color = R.color.transparent;
+            }
+
+            Activity activity = getActivity();
+            if (activity != null) {
+                BarUtils.setStatusBarLightMode(activity, true);
+                BarUtils.setStatusBarColor(activity, activity.getResources().getColor(color), true);
+            }
+        }
+    }
+
+    protected void setBarState(View rootView) {
+        showBarState(rootView, 0, true);
+    }
+
+    protected void setBarState(View rootView, @ColorRes int color, boolean isShow) {
+        showBarState(rootView, color, isShow);
+    }
 
 
     @Override

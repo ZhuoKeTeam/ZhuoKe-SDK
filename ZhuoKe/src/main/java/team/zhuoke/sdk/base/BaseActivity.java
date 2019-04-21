@@ -8,8 +8,10 @@ import android.view.Window;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.blankj.utilcode.util.BarUtils;
 import com.readystatesoftware.systembartint.SystemBarTintManager;
 
+import androidx.annotation.ColorRes;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -64,6 +66,28 @@ public abstract class BaseActivity extends AppCompatActivity implements Toolbar.
     //设置标题
     protected void setTitle(String title) {
         mTitle.setText(title);
+    }
+
+
+    protected void showBarState(View rootView, @ColorRes int color, boolean isShow) {
+        if (isShow) {
+            BarUtils.subtractMarginTopEqualStatusBarHeight(rootView);
+
+            if (color == 0) {
+                color = R.color.transparent;
+            }
+
+            BarUtils.setStatusBarLightMode(this, true);
+            BarUtils.setStatusBarColor(this, getApplication().getResources().getColor(color), true);
+        }
+    }
+
+    protected void setBarState(View rootView) {
+        showBarState(rootView, 0, true);
+    }
+
+    protected void setBarState(View rootView, @ColorRes int color, boolean isShow) {
+        showBarState(rootView, color, isShow);
     }
 
     protected void initToolbar() {

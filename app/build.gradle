@@ -31,8 +31,8 @@ dependencies {
     implementation deps.butterknife
     annotationProcessor deps.butterknife_compiler
 
-    implementation 'com.github.ZhuoKeTeam:zhuoke-sdk:1.0.8'
-//    implementation project(':ZhuoKe')
+//    implementation 'com.github.ZhuoKeTeam:zhuoke-sdk:1.0.8'
+    implementation project(':ZhuoKe')
 
 
     testImplementation deps.junit
