@@ -31,8 +31,8 @@ android {
 
 dependencies {
     api fileTree(dir: 'libs', include: ['*.jar'])
-    api deps.utilcodex
-    api deps.rvhX
+    api deps.utilcode
+    api deps.rvh
     api deps.systembartint
 
     // okhttp
@@ -50,9 +50,9 @@ dependencies {
 
 
     api deps.constraint_layout
-    api deps.recyclerviewX
+    api support.recyclerview
 
-    api(deps.appcompatX){
+    api(support.app_compat){
         exclude group: 'com.android.support', module: 'support-compat'
     }
 

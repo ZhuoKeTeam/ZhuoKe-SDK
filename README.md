@@ -21,7 +21,7 @@ allprojects {
 Step 2. 
 ```
 dependencies {
-    implementation 'com.github.ZhuoKeTeam:zhuoke-sdk:1.0.8'
+    implementation 'com.github.ZhuoKeTeam:zhuoke-sdk:1.0.11' // androidX 请直接使用 1.1.0x
 }
 ```
 
