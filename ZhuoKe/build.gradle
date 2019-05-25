@@ -31,7 +31,7 @@ android {
 
 dependencies {
     api fileTree(dir: 'libs', include: ['*.jar'])
-    api deps.utilcode
+    api deps.utilcodex
     api deps.rvhX
     api deps.systembartint
 

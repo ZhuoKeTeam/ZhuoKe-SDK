@@ -87,6 +87,7 @@ deps.kotlin_gradle_plugin = "org.jetbrains.kotlin:kotlin-gradle-plugin:$versions
 deps.kotlin_gradle_extensions = "org.jetbrains.kotlin:kotlin-android-extensions:$versions.kotlin_version"
 deps.constraint_layout = "com.android.support.constraint:constraint-layout:$versions.constraint_layout"
 deps.utilcode = "com.blankj:utilcode:$versions.utilcode"
+deps.utilcodex = "com.blankj:utilcodex:$versions.utilcode"
 deps.okhttp = "com.squareup.okhttp3:okhttp:$versions.okhttp"
 deps.okhttp_interceptor = "com.squareup.okhttp3:logging-interceptor:$versions.okhttp"
 
